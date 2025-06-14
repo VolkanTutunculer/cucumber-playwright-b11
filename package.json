@@ -1,0 +1,25 @@
+{
+  "name": "cucumber-playwright-b11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolkanTutunculer/cucumber-playwright-b11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VolkanTutunculer/cucumber-playwright-b11/issues"
+  },
+  "homepage": "https://github.com/VolkanTutunculer/cucumber-playwright-b11#readme",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
+    "@playwright/test": "^1.53.0",
+    "dotenv": "^16.5.0"
+  }
+}

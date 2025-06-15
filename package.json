@@ -3,18 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VolkanTutunculer/cucumber-playwright-b11.git"
+    "test": "npx cucumber-js",
+    "test:smoke": "npx cucumber-js --tags \"@Smoke\"",
+    "test:regression": "npx cucumber-js --tags \"@Regression\""
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VolkanTutunculer/cucumber-playwright-b11/issues"
-  },
-  "homepage": "https://github.com/VolkanTutunculer/cucumber-playwright-b11#readme",
   "description": "",
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",

@@ -9,6 +9,11 @@ class CustomWorld extends World{
     this.context = null;
     this.page = null;
 
+    // Declare POM fixtures
+    this.basePage = null;
+    this.wikiSearchPage = null;
+    this.tgBasePage = null;
+    this.tgFrontendTestingPage = null;
   }
 }
 

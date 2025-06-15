@@ -1,17 +1,16 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 
-
 Given(/^I am on "([^"]*)"$/, async function(url) {
-	await this.page.goto(url);
+	await this.basePage.goto(url);
 });
 
 When(/^I hover "([^"]*)" menu item$/, async function(itemText){
-	await this.page.locator('#dropdown-testing').hover();
+	await this.tgBasePage.testingDropdown.hover();
 });
 
 When('I click {string} header option', async function(elementText) {
-	await this.page.locator('#frontend-option').click();
+	await this.tgBasePage.selectTestingOption(elementText);
 });
 
 Then(/^I see "([^"]*)" page$/, async function(pageName) {
@@ -25,11 +24,11 @@ Then(/^I see "([^"]*)" page$/, async function(pageName) {
 });
 
 Then(/^I see 10 practice cards$/, async function() {
-	expect(await this.page.locator('[class^="CardGrids_CardGrids"] a').count()).toBe(10);
+	expect(await this.tgFrontendTestingPage.practiceCards.count()).toBe(10);
 });
 
 Then(/^I see 10 project cards$/, async function() {
-	expect(await this.page.locator('[class^="CardGrids_projectContainer"] a').count()).toBe(10);
+	expect(await this.tgFrontendTestingPage.projectCards.count()).toBe(10);
 });
 
 When('I click {string} {word}', async function(elementText, elementRole) {

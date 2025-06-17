@@ -3,6 +3,7 @@ import { chromium } from '@playwright/test';
 import { WikiSearchPage } from "../pages/WikiSearchPage.js";
 import { TGBasePage } from "../pages/tg-app-pages/TGBasePage.js";
 import { TGFrontendTestingPage } from "../pages/tg-app-pages/TGFrontendTestingPage.js";
+import { TGLoginPage } from "../pages/tg-app-pages/TGLoginPage.js";
 import { BasePage } from "../pages/BasePage.js";
 
 // This file runs before/after anything else in the steps folder
@@ -23,6 +24,7 @@ Before(async function() {
   this.wikiSearchPage = new WikiSearchPage(this.page);
   this.tgBasePage = new TGBasePage(this.page);
   this.tgFrontendTestingPage = new TGFrontendTestingPage(this.page);
+  this.tgLoginPage = new TGLoginPage(this.page);
 });
 
 After(async function() {
